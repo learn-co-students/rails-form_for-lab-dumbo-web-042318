@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  get 'school_classes/students'
+
+  resources :students
+  resources :school_classes
+
+  get "/school_classes/students", to: "school_classes#students"
+
+  # get "/students/", to: "school_classes#students", as: 'students'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
